@@ -9,10 +9,10 @@ dependencies = [
 ]
 
 [project.urls]
-Repository = "https://github.com/yourusername/ApoStudio"
+Repository = "https://github.com/apoloniart/ApoStudio"
 
 [tool.comfy]
-PublisherId = ""
+PublisherId = "apoloniart"
 DisplayName = "ApoStudio"
 Icon = ""
 Tags = ["llm", "chat", "prompt", "vision", "lm-studio", "ollama", "openai-compatible", "captioning", "history", "display"]
