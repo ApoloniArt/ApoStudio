@@ -1,0 +1,737 @@
+{
+  "id": "efd8e220-9658-4e8f-9c9c-5f33c8da9eb4",
+  "revision": 0,
+  "last_node_id": 49,
+  "last_link_id": 70,
+  "nodes": [
+    {
+      "id": 37,
+      "type": "ApoStudio_SystemPrompt",
+      "pos": [
+        -2098.7501733612544,
+        -868.8803538008043
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "system_prompt",
+          "type": "STRING",
+          "links": [
+            65
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ApoStudio_SystemPrompt",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "file": true
+          },
+          "version": "7.2.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "vision_captioner.txt"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 2,
+      "type": "ApoStudio_LoadImage",
+      "pos": [
+        -2102.037654346483,
+        -750.3586840305428
+      ],
+      "size": [
+        270.0000305175781,
+        446.7522888183594
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            64
+          ]
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "filename",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ApoStudio_LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "image": true,
+            "upload": true
+          },
+          "version": "7.2.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "1031e972265d7c43ead4c5a261f954e9-3793019089.jpg",
+        ""
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 42,
+      "type": "ApoStudio_Chat",
+      "pos": [
+        -1775.1820267056887,
+        -888.7625831216291
+      ],
+      "size": [
+        404.56140549538395,
+        685.3948341364343
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "user_prompt_in",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "system_prompt_in",
+          "shape": 7,
+          "type": "STRING",
+          "link": 65
+        },
+        {
+          "name": "history_in",
+          "shape": 7,
+          "type": "APO_HISTORY",
+          "link": null
+        },
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 64
+        }
+      ],
+      "outputs": [
+        {
+          "name": "response",
+          "type": "STRING",
+          "links": [
+            66
+          ]
+        },
+        {
+          "name": "full_context",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "history_out",
+          "type": "APO_HISTORY",
+          "links": []
+        },
+        {
+          "name": "elapsed_seconds",
+          "type": "FLOAT",
+          "links": [
+            68
+          ]
+        },
+        {
+          "name": "token_usage",
+          "type": "STRING",
+          "links": [
+            69
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ApoStudio_Chat",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "api_url": true,
+            "model": true,
+            "user_prompt": true,
+            "system_prompt": true,
+            "temperature": true,
+            "max_tokens": true,
+            "top_p": true,
+            "top_k": true,
+            "min_p": true,
+            "repeat_penalty": true,
+            "seed": true
+          },
+          "version": "7.2.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "http://localhost:1234/v1",
+        "qwen3.5-9b",
+        "describe this image in one flowing paragraph of 100 words",
+        "",
+        0.6,
+        2048,
+        0.95,
+        40,
+        0.05,
+        1.1,
+        1883618819,
+        "randomize"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 35,
+      "type": "ApoStudio_Display",
+      "pos": [
+        -1333.127276706385,
+        -737.9546240699145
+      ],
+      "size": [
+        285.2449806582413,
+        88
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 68
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ApoStudio_Display",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.2.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "25.44"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 34,
+      "type": "ApoStudio_Display",
+      "pos": [
+        -1332.5338556334916,
+        -585.5452311608877
+      ],
+      "size": [
+        284.92721527583126,
+        88
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 69
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ApoStudio_Display",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.2.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "prompt: 685  completion: 122  total: 807"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 36,
+      "type": "ApoStudio_Display",
+      "pos": [
+        -1014.9640168947028,
+        -758.3699710619288
+      ],
+      "size": [
+        713.895207517867,
+        555.8654350276746
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 67
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ApoStudio_Display",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.2.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "A gleaming bronze cannon, mounted on spoked wheels and angled diagonally across a shield-shaped emblem, dominates the composition with its polished metallic surfaces catching dramatic highlights. The word \"Arsenal\" is rendered in bold silver lettering beneath the barrel, set against a deep red background that glows with fiery orange embers swirling around the edges. A luminous ring of light traces the outer contour of the shield, enhancing its three-dimensional form while casting sharp shadows within its recesses. Dark smoke and sparks drift upward from below, adding dynamic motion to an otherwise static scene steeped in power and intensity."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 3,
+      "type": "ApoStudio_UnloadModels",
+      "pos": [
+        -1331.4733210708985,
+        -888.6878486999831
+      ],
+      "size": [
+        284.79863131143634,
+        78.77887533218086
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "trigger_in",
+          "shape": 7,
+          "type": "STRING",
+          "link": 66
+        }
+      ],
+      "outputs": [
+        {
+          "name": "status",
+          "type": "STRING",
+          "links": [
+            70
+          ]
+        },
+        {
+          "name": "trigger_out",
+          "type": "STRING",
+          "links": [
+            67
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ApoStudio_UnloadModels",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "execute": true
+          },
+          "version": "7.2.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        true
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 46,
+      "type": "ApoStudio_Display",
+      "pos": [
+        -1014.2405178374948,
+        -888.7296905060881
+      ],
+      "size": [
+        285.2449806582413,
+        88
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 70
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ApoStudio_Display",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.2.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "All models unloaded successfully."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 38,
+      "type": "ApoStudio_History",
+      "pos": [
+        -1525.6120860642616,
+        -954.6840450385436
+      ],
+      "size": [
+        712.4727172851562,
+        142
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 2,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "history_in",
+          "shape": 7,
+          "type": "APO_HISTORY",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "history_out",
+          "type": "APO_HISTORY",
+          "links": []
+        },
+        {
+          "name": "history_json",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "history_md",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "turn_count",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ApoStudio_History",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "action": true,
+            "session_file": true
+          },
+          "version": "7.2.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "load & append",
+        "D:\\ComfyUI\\ComfyUI_windows_portable2\\ComfyUI\\custom_nodes\\ComfyUI-ApoStudio\\prompts\\session.json"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 39,
+      "type": "ApoStudio_UserPrompt",
+      "pos": [
+        -1774.8878496781663,
+        -955.0809821225996
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 3,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "user_prompt",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ApoStudio_UserPrompt",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "file": true
+          },
+          "version": "7.2.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "describe_image.txt"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 48,
+      "type": "Label (rgthree)",
+      "pos": [
+        -1901.0990504529714,
+        -1341.3521387209569
+      ],
+      "size": [
+        1311.38330078125,
+        150
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "ᗩᑭOᒪOᑎIᗩᖇT🌈™",
+      "properties": {
+        "fontSize": 150,
+        "fontFamily": "Arial",
+        "fontColor": "#520e7d",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.2.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 47,
+      "type": "Label (rgthree)",
+      "pos": [
+        -2390.104291732963,
+        -1150.1021755393363
+      ],
+      "size": [
+        2312.583251953125,
+        100
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "ApoStudio Image Caption v1 [Single Image Caption]",
+      "properties": {
+        "fontSize": 100,
+        "fontFamily": "Arial",
+        "fontColor": "#ffffff",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.2.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 49,
+      "type": "Note",
+      "pos": [
+        -2586.8008773532993,
+        -872.717569325735
+      ],
+      "size": [
+        454.46067029587584,
+        219.3940184661028
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Operation",
+      "properties": {},
+      "widgets_values": [
+        "This is a simple workflow for single image captioning using an LLM backend server.\n\n1. Type/paste in your user prompt & system prompt manually, or connect the user/system prompt nodes to load presets from the node directories.\n\n2. Set the server URL\n3. Select your local model\n4. Adjust parameters [Overrides backend settings on each pass]\n5. Toggle 'Unload all models' on/off for memory management between passes [This is good for unloading your LLM if you use this as part of a more complex image generation workflow]\n6. Connect any/all of my Display nodes to see your desired outputs.\n\nLove & digital kisses\nApolonia 💜\n\n"
+      ],
+      "color": "#9414ff",
+      "bgcolor": "#8000ff"
+    }
+  ],
+  "links": [
+    [
+      64,
+      2,
+      0,
+      42,
+      3,
+      "IMAGE"
+    ],
+    [
+      65,
+      37,
+      0,
+      42,
+      1,
+      "STRING"
+    ],
+    [
+      66,
+      42,
+      0,
+      3,
+      0,
+      "STRING"
+    ],
+    [
+      67,
+      3,
+      1,
+      36,
+      0,
+      "*"
+    ],
+    [
+      68,
+      42,
+      3,
+      35,
+      0,
+      "*"
+    ],
+    [
+      69,
+      42,
+      4,
+      34,
+      0,
+      "*"
+    ],
+    [
+      70,
+      3,
+      0,
+      46,
+      0,
+      "*"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.5989500000000018,
+      "offset": [
+        3401.774070820086,
+        1706.699006314903
+      ]
+    },
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "frontendVersion": "1.36.14",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

@@ -1,0 +1,592 @@
+{
+  "id": "efd8e220-9658-4e8f-9c9c-5f33c8da9eb4",
+  "revision": 0,
+  "last_node_id": 47,
+  "last_link_id": 63,
+  "nodes": [
+    {
+      "id": 43,
+      "type": "ApoStudio_Display",
+      "pos": [
+        -623.4757856581527,
+        -892.3359520868152
+      ],
+      "size": [
+        615.6072961728975,
+        589.9555885202107
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 60
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ApoStudio_Display",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.2.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "[\n  {\n    \"role\": \"user\",\n    \"content\": \"Hi, I'm Apolonia....how are you today?\"\n  },\n  {\n    \"role\": \"assistant\",\n    \"content\": \"Hi Apolonia! I'm doing well, thanks for asking. How can I help you today?\"\n  }\n]"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 41,
+      "type": "ApoStudio_Display",
+      "pos": [
+        -1297.0637961440711,
+        -888.5552465082021
+      ],
+      "size": [
+        629.4055477964342,
+        244.99929793179228
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 62
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ApoStudio_Display",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.2.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Hi Apolonia! I'm doing well, thanks for asking. How can I help you today?"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 44,
+      "type": "ApoStudio_Display",
+      "pos": [
+        -1305.1094158608694,
+        -590.6559961358523
+      ],
+      "size": [
+        640.2359209343994,
+        685.6401915968817
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 63
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ApoStudio_Display",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.2.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "### 👤 User\nHi, I'm Apolonia....how are you today?\n\n---\n\n### 🤖 Assistant\nHi Apolonia! I'm doing well, thanks for asking. How can I help you today?\n"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 45,
+      "type": "Label (rgthree)",
+      "pos": [
+        -2338.501468936702,
+        -1334.770652039197
+      ],
+      "size": [
+        2078.7333984375,
+        100
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "ApoStudio Chat v1 [Multi-turn chat with history]",
+      "properties": {
+        "fontSize": 100,
+        "fontFamily": "Arial",
+        "fontColor": "#ffffff",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.2.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 46,
+      "type": "Label (rgthree)",
+      "pos": [
+        -1883.1050430837083,
+        -1536.6725895091563
+      ],
+      "size": [
+        1311.38330078125,
+        150
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "ᗩᑭOᒪOᑎIᗩᖇT🌈™",
+      "properties": {
+        "fontSize": 150,
+        "fontFamily": "Arial",
+        "fontColor": "#520e7d",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.2.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 42,
+      "type": "ApoStudio_Chat",
+      "pos": [
+        -1775.1820267056887,
+        -888.7625831216291
+      ],
+      "size": [
+        404.56140549538395,
+        686.6492206476648
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "user_prompt_in",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "system_prompt_in",
+          "shape": 7,
+          "type": "STRING",
+          "link": 53
+        },
+        {
+          "name": "history_in",
+          "shape": 7,
+          "type": "APO_HISTORY",
+          "link": 54
+        },
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "response",
+          "type": "STRING",
+          "links": [
+            62
+          ]
+        },
+        {
+          "name": "full_context",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "history_out",
+          "type": "APO_HISTORY",
+          "links": [
+            55
+          ]
+        },
+        {
+          "name": "elapsed_seconds",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "token_usage",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ApoStudio_Chat",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "api_url": true,
+            "model": true,
+            "user_prompt": true,
+            "system_prompt": true,
+            "temperature": true,
+            "max_tokens": true,
+            "top_p": true,
+            "top_k": true,
+            "min_p": true,
+            "repeat_penalty": true,
+            "seed": true
+          },
+          "version": "7.2.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "http://localhost:1234/v1",
+        "qwen3.5-9b",
+        "Hi, I'm Apolonia....how are you today?",
+        "",
+        0.6,
+        2048,
+        0.95,
+        40,
+        0.05,
+        1.1,
+        1535421758,
+        "randomize"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 38,
+      "type": "ApoStudio_History",
+      "pos": [
+        -1328.6326904296875,
+        -1135.6502685546875
+      ],
+      "size": [
+        759.1234553061295,
+        142
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "history_in",
+          "shape": 7,
+          "type": "APO_HISTORY",
+          "link": 55
+        }
+      ],
+      "outputs": [
+        {
+          "name": "history_out",
+          "type": "APO_HISTORY",
+          "links": []
+        },
+        {
+          "name": "history_json",
+          "type": "STRING",
+          "links": [
+            60
+          ]
+        },
+        {
+          "name": "history_md",
+          "type": "STRING",
+          "links": [
+            63
+          ]
+        },
+        {
+          "name": "turn_count",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ApoStudio_History",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "action": true,
+            "session_file": true
+          },
+          "version": "7.2.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "load & append",
+        "D:\\ComfyUI\\ComfyUI_windows_portable2\\ComfyUI\\custom_nodes\\ComfyUI-ApoStudio\\prompts\\session.json"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 40,
+      "type": "ApoStudio_History",
+      "pos": [
+        -2627.6171555991878,
+        -884.4879879001307
+      ],
+      "size": [
+        760.4109900507701,
+        142
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "history_in",
+          "shape": 7,
+          "type": "APO_HISTORY",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "history_out",
+          "type": "APO_HISTORY",
+          "links": [
+            54
+          ]
+        },
+        {
+          "name": "history_json",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "history_md",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "turn_count",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ApoStudio_History",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "action": true,
+            "session_file": true
+          },
+          "version": "7.2.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "load",
+        "D:\\ComfyUI\\ComfyUI_windows_portable2\\ComfyUI\\custom_nodes\\ComfyUI-ApoStudio\\prompts\\session.json"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 37,
+      "type": "ApoStudio_SystemPrompt",
+      "pos": [
+        -2135.6872739778337,
+        -661.4998886805162
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "system_prompt",
+          "type": "STRING",
+          "links": [
+            53
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ApoStudio_SystemPrompt",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "file": true
+          },
+          "version": "7.2.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "assistant.txt"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 47,
+      "type": "Note",
+      "pos": [
+        -2643.8869048051915,
+        -548.0869463471095
+      ],
+      "size": [
+        785.1206408864878,
+        492.6670258737753
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Operation",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.2.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "This is a simple set up for a multi-turn conversation [with history] with your chosen LLM.\nPlease read my full documentation on the repo for detailed set up.\n\n1. Set your LLM backend server URL\n2. Select your local LLM of choice.\n\nFor multi-turn chat with history, you need to supply a path to where the json will be stored, and manually add \\session.json to the end of that path.\nIt will create a 'session.json' file within your designated directory, this is where your conversation will be saved.\nThe full path including \\session.json needs to be entered into both 'history' nodes to enable the json to be created, appended, and saved.\n\nCONNECTIONS - INPUT [Left of main chat node]\n3. Connect the 'history out' of a history node, to the 'history in' of the chat node.\nSet the action to 'Load' [This perpetuates the conversation from the json file]\n\n4. Manually type, or connect your preset system prompt into my ApoStudio Chat node.\n[Add all your system prompts to the node directory for ease of selection. This gives the chosen LLM the desired personality that you require for your conversation😉] \n\n5. Configure your LLM response parameters in Chat node [These override the backend settings on single passes, not permanently]\n\nCONNECTIONS - OUTPUT [Right of main chat node]\n6. Connect the 'history out' of chat node, to 'history in' of a second history node. Set the action on this node to 'load & append'. This loads the saved conversation from the json and appends it with the concurrent response. That is then fed back into the chat by the left history node which completes the history of the conversation.\n[The session file path should be identical on both history nodes, to save & load the conversation to the same json file in the node directory]\n\n7. Choose your visual output?\nChat node - Response >>> Only the single response from the LLM in normal text format.\nHistory node - history_md >>> Displays the entire chat user/assistant in markdown format.\nHistory node - history_json >>> Displays the full saved conversation in the directory json file.\n\nThere are many chat interfaces available to chat/roleplay with your LLM, and I have created many myself.....so I just thought it'd be fun to be able to do it inside Comfy. No reason other than I can, and it's fun.\n\nLove & digital kisses\nApolonia 💜"
+      ],
+      "color": "#9414ff",
+      "bgcolor": "#8000ff"
+    }
+  ],
+  "links": [
+    [
+      53,
+      37,
+      0,
+      42,
+      1,
+      "STRING"
+    ],
+    [
+      54,
+      40,
+      0,
+      42,
+      2,
+      "APO_HISTORY"
+    ],
+    [
+      55,
+      42,
+      2,
+      38,
+      0,
+      "APO_HISTORY"
+    ],
+    [
+      60,
+      38,
+      1,
+      43,
+      0,
+      "*"
+    ],
+    [
+      62,
+      42,
+      0,
+      41,
+      0,
+      "*"
+    ],
+    [
+      63,
+      38,
+      2,
+      44,
+      0,
+      "*"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.5989500000000041,
+      "offset": [
+        3552.713303347881,
+        1793.9581666171473
+      ]
+    },
+    "ue_links": [],
+    "frontendVersion": "1.36.14",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true,
+    "links_added_by_ue": []
+  },
+  "version": 0.4
+}
