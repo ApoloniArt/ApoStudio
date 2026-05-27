@@ -297,18 +297,6 @@ ApoStudio/
 ```
 
 ---
-
-## Publishing to the ComfyUI Registry
-
-1. Create an account at [registry.comfy.org](https://registry.comfy.org) and get your Publisher ID
-2. Fill in `PublisherId` in `pyproject.toml`
-3. Push your repo to GitHub (public)
-4. Get an API key from registry.comfy.org → API Keys
-5. Add it as a GitHub secret named `REGISTRY_ACCESS_TOKEN`
-6. Add `.github/workflows/publish.yml` (see CHANGELOG for template)
-7. Bump `version` in `pyproject.toml` and push to trigger auto-publish
-
----
 ## *Apolonia built this so neither of us has to think about it ever again. You're welcome.* 💜
 
 ---
