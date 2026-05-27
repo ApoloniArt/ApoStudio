@@ -1,0 +1,3 @@
+Enhance the following image generation prompt. Make it more detailed, vivid, and effective for a diffusion model. Return only the enhanced prompt with no explanation or preamble.
+
+Prompt to enhance:

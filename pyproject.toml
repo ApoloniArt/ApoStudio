@@ -1,0 +1,18 @@
+[project]
+name = "apostudio"
+description = "LLM chat, vision, prompt enhancement and image captioning nodes for ComfyUI via any OpenAI-compatible server."
+version = "1.1.0"
+license = { file = "LICENSE" }
+dependencies = [
+    "requests>=2.28.0",
+    "Pillow>=9.0.0",
+]
+
+[project.urls]
+Repository = "https://github.com/yourusername/ApoStudio"
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ApoStudio"
+Icon = ""
+Tags = ["llm", "chat", "prompt", "vision", "lm-studio", "ollama", "openai-compatible", "captioning", "history", "display"]
