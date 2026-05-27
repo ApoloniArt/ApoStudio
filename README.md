@@ -1,3 +1,4 @@
+[![PayPal Donate](screenshots/paypal.png)](https://www.paypal.com/donate/?hosted_button_id=MG5S4EPK6EUSL)
 # ApoStudio
 
 **ComfyUI custom node package for LLM-powered workflows.**
