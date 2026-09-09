@@ -296,6 +296,9 @@ ApoStudio/
         └── apo_display.js           ← Frontend JS for Display node rendering
 ```
 
+## Attribution
+#### You are very welcome to fork **ApoGalleria** and augment my work to fit your own requirements if you feel the need to do so, but please have the kindness to credit & link me as the original creator, in accordance with the MIT license. That would mean a lot to me, and is the decent thing to do 🤗
+See [NOTICE](NOTICE) for the full attribution request.
 ---
 ## *Apolonia built this so neither of us has to think about it ever again. You're welcome.* 💜
 
