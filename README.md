@@ -297,7 +297,7 @@ ApoStudio/
 ```
 
 ## Attribution
-#### You are very welcome to fork **ApoStudio** and augment my work to fit your own requirements if you feel the need to do so, but please have the kindness to credit & link me as the original creator, in accordance with the MIT license. That would mean a lot to me, and is the decent thing to do 🤗
+#### You are very welcome to fork **ApoStudio** and augment my work to fit your own requirements if you feel the need to do so, but please have the kindness to credit & link me as the original creator, in accordance with the MIT [license](https://github.com/ApoloniArt/ApoStudio/blob/main/LICENSE) That would mean a lot to me, and is the decent thing to do 🤗
 See [NOTICE](https://github.com/ApoloniArt/ApoStudio/blob/main/NOTICE) for the full attribution request.
 
 ---
