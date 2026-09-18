@@ -204,7 +204,7 @@ Image loader with a file picker for your ComfyUI `input/` directory. Supports jp
 
 ```bash
 cd ComfyUI/custom_nodes
-git clone https://github.com/yourusername/ApoStudio
+git clone https://github.com/apoloniart/ApoStudio
 ```
 
 Or download the ZIP and extract so the folder is at `ComfyUI/custom_nodes/ApoStudio/` (or any name — the package works regardless of folder name).
