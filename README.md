@@ -232,7 +232,7 @@ You should see in the terminal:
 
 All nodes appear under the **ApoStudio** category. Search **"apo"** in the node finder to see them all.
 
-### **<ins>Comfy Manager Install:</ins>** After install, rename the folder to **ComfyUI-ApoStudio**
+### 4. **<ins>Comfy Manager Install:</ins>** After install, rename the folder to **ComfyUI-ApoStudio**
 
 ---
 
