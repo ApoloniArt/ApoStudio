@@ -233,7 +233,7 @@ You should see in the terminal:
 All nodes appear under the **ApoStudio** category. Search **"apo"** in the node finder to see them all.
 
 ### 4. **<ins>Comfy Manager Install:</ins>** 
-You can safely install via Comfy Manager, without the fear of dependencies brreaking your install. After rename the folder to **ComfyUI-ApoStudio**
+You can safely install via Comfy Manager, without the fear of dependencies brreaking your install. After installation, rename the folder to **ComfyUI-ApoStudio**
 
 ---
 
