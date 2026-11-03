@@ -1,4 +1,3 @@
-[![PayPal Donate](assets/screenshots/paypal.png)](https://www.paypal.com/donate/?hosted_button_id=MG5S4EPK6EUSL)
 <h1 align="center">ApoStudio</h1>
 <p align="center"><b>ComfyUI custom node package for LLM-powered workflows.</b></p>
 
@@ -315,7 +314,7 @@ ApoStudio/
 See [NOTICE](https://github.com/ApoloniArt/ApoStudio/blob/main/NOTICE) for the full attribution request.
 
 ---
-#### If any of my little apps, tools, nodes or scripts have helped save you time or brought you joy, feel free to shower me with copious amounts of gifts 🤭 here: [PayPal Donation](https://www.paypal.com/donate/?hosted_button_id=MG5S4EPK6EUSL) or hit the button at the top☝️ Any support at all is hugely appreciated, even a star or nice comment🙏
+#### If any of my little apps, tools, nodes or scripts have helped save you time or brought you joy, feel free to leave a star or nice comment 🙏
 
 ---
 ## *Apolonia built this so neither of us has to think about it ever again. You're welcome.* 💜
