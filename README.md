@@ -1,6 +1,7 @@
 [![PayPal Donate](assets/screenshots/paypal.png)](https://www.paypal.com/donate/?hosted_button_id=MG5S4EPK6EUSL)
-# ApoStudio
-**ComfyUI custom node package for LLM-powered workflows.**
+<h1 align="center">ApoStudio</h1>
+<p align="center"><b>ComfyUI custom node package for LLM-powered workflows.</b></p>
+
 <p align="center">
   <a href="https://github.com/comfyanonymous/ComfyUI"><img alt="ComfyUI extension" src="https://img.shields.io/badge/ComfyUI-Extension-5ea500?style=flat"></a>
   <a href="https://github.com/ApoloniArt/ApoStudio/releases"><img alt="Version" src="https://img.shields.io/badge/dynamic/toml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fapoloniart%2FApoStudio%2Fmain%2Fpyproject.toml&query=%24.project.version&label=Version&color=ed7d31&style=flat"></a>
