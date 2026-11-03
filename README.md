@@ -1,5 +1,6 @@
 [![PayPal Donate](assets/screenshots/paypal.png)](https://www.paypal.com/donate/?hosted_button_id=MG5S4EPK6EUSL)
 # ApoStudio
+**ComfyUI custom node package for LLM-powered workflows.**
 <p align="center">
   <a href="https://github.com/comfyanonymous/ComfyUI"><img alt="ComfyUI extension" src="https://img.shields.io/badge/ComfyUI-Extension-5ea500?style=flat"></a>
   <a href="https://github.com/ApoloniArt/ApoStudio/releases"><img alt="Version" src="https://img.shields.io/badge/dynamic/toml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fapoloniart%2FApoStudio%2Fmain%2Fpyproject.toml&query=%24.project.version&label=Version&color=ed7d31&style=flat"></a>
@@ -11,8 +12,6 @@
   <a href="https://discord.gg/XDExAUzuZp"><img alt="Discord" src="https://img.shields.io/badge/Discord-Join-5865F2?logo=discord&logoColor=white&style=flat"></a>
   <a href="https://github.com/ApoloniArt"><img alt="Follow on GitHub" src="https://img.shields.io/github/followers/ApoloniArt?label=Follow&logo=github&color=555&style=flat"></a>
 </p>
-
-**ComfyUI custom node package for LLM-powered workflows.**
 
 Chat, prompt enhancement, image captioning, and multi-turn conversation via any **OpenAI-compatible** server — LM Studio, Ollama, OpenAI API, and more.
 
