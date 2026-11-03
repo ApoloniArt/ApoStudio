@@ -1,4 +1,4 @@
-<h1 align="center">ApoStudio</h1>
+<h1 align="center">𝔸𝕡𝕠𝕊𝕥𝕦𝕕𝕚𝕠</h1>
 <p align="center"><b>ComfyUI custom node package for LLM-powered workflows.</b></p>
 
 <p align="center">
