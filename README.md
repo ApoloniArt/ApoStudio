@@ -1,5 +1,18 @@
 [![PayPal Donate](assets/screenshots/paypal.png)](https://www.paypal.com/donate/?hosted_button_id=MG5S4EPK6EUSL)
 # ApoStudio
+```html
+<p align="center">
+  <a href="https://github.com/comfyanonymous/ComfyUI"><img alt="ComfyUI extension" src="https://img.shields.io/badge/ComfyUI-Extension-5ea500?style=flat"></a>
+  <a href="https://github.com/ApoloniArt/ApoStudio/releases"><img alt="Version" src="https://img.shields.io/badge/dynamic/toml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fapoloniart%2FApoStudio%2Fmain%2Fpyproject.toml&query=%24.project.version&label=Version&color=ed7d31&style=flat"></a>
+  <a href="https://github.com/ApoloniArt/ApoStudio/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/apoloniart/ApoStudio?label=License&color=e0414a&style=flat"></a>
+  <a href="https://github.com/ApoloniArt/ApoStudio/blob/main/requirements.txt"><img alt="Dependencies" src="https://img.shields.io/badge/Dependencies-2-0075c2?style=flat"></a>
+  <a href="https://github.com/ApoloniArt/ApoStudio/commits"><img alt="Last update" src="https://img.shields.io/github/last-commit/apoloniart/ApoStudio?label=Last%20Update&color=ed7d31&style=flat"></a>
+  <a href="https://github.com/ApoloniArt/ApoStudio/commits"><img alt="Activity" src="https://img.shields.io/github/commit-activity/m/apoloniart/ApoStudio?label=Activity&color=d4b300&style=flat"></a>
+  <a href="https://github.com/ApoloniArt/ApoStudio/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/apoloniart/ApoStudio?logo=github&color=555&style=flat"></a>
+  <a href="https://discord.gg/XDExAUzuZp"><img alt="Discord" src="https://img.shields.io/badge/Discord-Join-5865F2?logo=discord&logoColor=white&style=flat"></a>
+  <a href="https://github.com/ApoloniArt"><img alt="Follow on GitHub" src="https://img.shields.io/github/followers/ApoloniArt?label=Follow&logo=github&color=555&style=flat"></a>
+</p>
+```
 
 **ComfyUI custom node package for LLM-powered workflows.**
 
