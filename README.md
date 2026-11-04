@@ -210,7 +210,10 @@ Image loader with a file picker for your ComfyUI `input/` directory. Supports jp
 
 ## Installation
 
-### 1. Clone or download
+1. ### **<ins>Comfy Manager Install [recommended]:</ins>**
+   My nodes have absolute minimal requirements, so you can confidently & safely install via Comfy Manager, without the fear of dependencies breaking your entire Comfy. Search **APO** in manager. After installation, rename the folder to **ComfyUI-ApoStudio**
+
+2. ### **<ins>Manual Install [git clone]:</ins>**
 
 ```bash
 cd ComfyUI/custom_nodes
@@ -219,7 +222,7 @@ git clone https://github.com/apoloniart/ApoStudio
 
 Or download the ZIP and extract so the folder is at `ComfyUI/custom_nodes/ApoStudio/` (or any name — the package works regardless of folder name).
 
-### 2. Install dependencies
+### 3. Install dependencies
 
 **Windows portable install:**
 ```bat
@@ -233,7 +236,7 @@ pip install -r custom_nodes/ApoStudio/requirements.txt
 
 Dependencies (`requests`, `Pillow`) also auto-install on first ComfyUI startup.
 
-### 3. Restart ComfyUI
+### 4. Restart ComfyUI
 
 You should see in the terminal:
 ```
@@ -241,9 +244,6 @@ You should see in the terminal:
 ```
 
 All nodes appear under the **ApoStudio** category. Search **"apo"** in the node finder to see them all.
-
-### 4. **<ins>Comfy Manager Install:</ins>** 
-My nodes have minimal requirements, so you can safely install via Comfy Manager without the fear of dependencies breaking your entire Comfy. After installation, rename the folder to **ComfyUI-ApoStudio**
 
 ---
 
