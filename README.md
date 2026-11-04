@@ -304,7 +304,13 @@ ApoStudio/
 See [NOTICE](https://github.com/ApoloniArt/ApoStudio/blob/main/NOTICE) for the full attribution request.
 
 ---
-#### If any of my little apps, tools, nodes or scripts have helped save you time or brought you joy, feel free to leave a star or nice comment 🙏
 
----
-## *Apolonia built this so neither of us has to think about it ever again. You're welcome.* 💜
+<div align="center">
+
+**Developed by [ApoloniArt ⚢🌈](https://github.com/ApoloniArt)**
+
+[![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/XDExAUzuZp)
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/apoloniart)
+
+</div>
+
