@@ -300,7 +300,7 @@ ApoStudio/
 ```
 
 ## 🫱🏻‍🫲🏻 Attribution & Licenses
-#### You are very welcome to fork **ApoStudio** and augment my work to fit your own requirements if you feel the need to do so, but please have the kindness to credit & link me as the original creator, in accordance with the [MIT license](https://github.com/ApoloniArt/ApoStudio/blob/main/LICENSE) That would mean a lot to me, and is the decent thing to do 🤗
+**ApoStudio** is MIT licensed, see [MIT license](https://github.com/ApoloniArt/ApoStudio/blob/main/LICENSE) If you use it in a project, a mention of "ApoStudio by ApoloniArt" is required and much appreciated 🤗
 See [NOTICE](https://github.com/ApoloniArt/ApoStudio/blob/main/NOTICE) for the full attribution request.
 
 ---
