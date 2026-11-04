@@ -214,36 +214,26 @@ Image loader with a file picker for your ComfyUI `input/` directory. Supports jp
    My nodes have absolute minimal requirements, so you can confidently & safely install via Comfy Manager, without the fear of dependencies breaking your entire Comfy. Search **APO** in manager. After installation, rename the folder to **ComfyUI-ApoStudio**
 
 2. ### **<ins>Manual Install [git clone]:</ins>**
+   ```bash
+   cd ComfyUI/custom_nodes
+   git clone https://github.com/ApoloniArt/ApoStudio ComfyUI-ApoStudio
+   ```
+3. Install dependencies:
+   ```bash
+   # Windows portable:
+   python -m pip install -r ComfyUI-ApoStudio\requirements.txt
 
-```bash
-cd ComfyUI/custom_nodes
-git clone https://github.com/apoloniart/ApoStudio ComfyUI-ApoStudio
-```
-
-Or download the ZIP and extract so the folder is at `ComfyUI/custom_nodes/ApoStudio/` (or any name — the package works regardless of folder name).
-
-### 3. Install dependencies
-
-**Windows portable install:**
-```bat
-python_embeded\python.exe -m pip install -r custom_nodes\ApoStudio\requirements.txt
-```
-
-**Standard install:**
-```bash
-pip install -r custom_nodes/ApoStudio/requirements.txt
-```
-
-Dependencies (`requests`, `Pillow`) also auto-install on first ComfyUI startup.
-
-### 4. Restart ComfyUI
-
-You should see in the terminal:
-```
-[ApoStudio] Loaded — 7 nodes registered.
-```
-
-All nodes appear under the **ApoStudio** category. Search **"apo"** in the node finder to see them all.
+   # Standard install:
+   pip install -r ComfyUI-ApoStudio\requirements.txt
+   ```  
+4. Restart ComfyUI.
+5. All 7 nodes appear under the **ApoStudio** category. Search **"apo"** in the node finder to see them all.
+   
+6. Updating my nodes:
+ ```bash
+   cd ComfyUI/custom_nodes/ComfyUI-ApoStudio
+   git pull
+   ```
 
 ---
 
