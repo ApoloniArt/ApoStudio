@@ -208,7 +208,7 @@ Image loader with a file picker for your ComfyUI `input/` directory. Supports jp
 
 ---
 
-## Installation
+## ⚙️ Installation
 
 1. ### **<ins>Comfy Manager Install [recommended]:</ins>**
    My nodes have absolute minimal requirements, so you can confidently & safely install via Comfy Manager, without the fear of dependencies breaking your entire Comfy. Search **APO** in manager. After installation, rename the folder to **ComfyUI-ApoStudio**
@@ -237,7 +237,7 @@ Image loader with a file picker for your ComfyUI `input/` directory. Supports jp
 
 ---
 
-## Adding your own prompt files
+## ✍🏻 Adding your own prompt files
 
 Drop `.txt`, `.md`, or `.json` files into:
 - `prompts/user/` — for user prompts
@@ -249,7 +249,7 @@ Files appear in the dropdown on the next workflow run. No restart needed.
 
 ---
 
-## Server compatibility
+## 🖥️ Server compatibility
 
 | Server | Default URL |
 |--------|------------|
@@ -262,7 +262,7 @@ Files appear in the dropdown on the next workflow run. No restart needed.
 
 ---
 
-## File structure
+## 📂 File structure
 
 ```
 ApoStudio/
@@ -299,7 +299,7 @@ ApoStudio/
         └── apo_display.js           ← Frontend JS for Display node rendering
 ```
 
-## Attribution
+## 🫱🏻‍🫲🏻 Attribution & Licenses
 #### You are very welcome to fork **ApoStudio** and augment my work to fit your own requirements if you feel the need to do so, but please have the kindness to credit & link me as the original creator, in accordance with the [MIT license](https://github.com/ApoloniArt/ApoStudio/blob/main/LICENSE) That would mean a lot to me, and is the decent thing to do 🤗
 See [NOTICE](https://github.com/ApoloniArt/ApoStudio/blob/main/NOTICE) for the full attribution request.
 
