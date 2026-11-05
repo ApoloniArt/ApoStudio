@@ -11,6 +11,7 @@
   <a href="https://github.com/ApoloniArt/ApoStudio/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/apoloniart/ApoStudio?logo=github&color=555&style=flat"></a>
   <a href="https://discord.gg/XDExAUzuZp"><img alt="Discord" src="https://img.shields.io/badge/Discord-Join-5865F2?logo=discord&logoColor=white&style=flat"></a>
   <a href="https://github.com/ApoloniArt"><img alt="Follow on GitHub" src="https://img.shields.io/github/followers/ApoloniArt?label=Follow&logo=github&color=555&style=flat"></a>
+  <a href="https://ko-fi.com/apoloniart"><img alt="Ko-fi" src="https://img.shields.io/badge/Ko--fi-Support-F16061?logo=ko-fi&logoColor=white&style=flat"></a>
 </p>
 
 Chat, prompt enhancement, image captioning, and multi-turn conversation via any **OpenAI-compatible** server — LM Studio, Ollama, OpenAI API, and more.
