@@ -244,6 +244,7 @@ Image loader with a file picker for your ComfyUI `input/` directory. Supports jp
    
 6. Updating my nodes:
    [a] For an install via Comfy Manager, press **Install**
+   
    [b] For a git clone install, see below 
  ```bash
    cd ComfyUI/custom_nodes/ComfyUI-ApoStudio
