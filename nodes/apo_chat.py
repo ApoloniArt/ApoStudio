@@ -5,6 +5,9 @@ import time
 import io
 import numpy as np
 
+from .apo_auth import build_headers
+from .apo_state import note_model
+
 
 def tensor_to_base64(tensor):
     from PIL import Image
@@ -85,13 +88,17 @@ class ApoStudioChat:
         if min_p > 0: params["min_p"] = min_p
         if seed >= 0: params["seed"]  = seed
 
+        note_model(model)
+
         try:
             start = time.perf_counter()
             r = requests.post(f"{api_url}/chat/completions",
-                              headers={"Content-Type": "application/json"},
+                              headers=build_headers(),
                               json=params, timeout=300)
             elapsed = round(time.perf_counter() - start, 3)
-            r.raise_for_status()
+            if not r.ok:
+                body = (r.text or "").strip()[:800]
+                return (f"ERROR: {r.status_code} {r.reason} from {api_url}\n{body}", "", [], elapsed, "")
             data = r.json()
         except requests.exceptions.ConnectionError:
             return (f"ERROR: Cannot connect to {api_url}.", "", [], 0.0, "")
