@@ -14,7 +14,7 @@
   <a href="https://ko-fi.com/apoloniart"><img alt="Ko-fi" src="https://img.shields.io/badge/Ko--fi-Support-F16061?logo=ko-fi&logoColor=white&style=flat"></a>
 </p>
 
-Chat, prompt enhancement, image captioning, and multi-turn conversation via any **OpenAI-compatible** server — LM Studio, Ollama, OpenAI API, and more.
+Chat, prompt enhancement, image captioning, and multi-turn conversation via any **OpenAI-compatible** server — LM Studio, Unsloth Studio, Ollama, OpenAI API, and more.
 
 ![ApoStudio Node Collection](assets/screenshots/ApoStudio-Nodes.jpg)
 
@@ -78,6 +78,15 @@ The core node. Sends a prompt to your LLM server and returns the response. Handl
 | `history_out` | APO_HISTORY | Updated conversation history — wire to History node (load & append) |
 | `elapsed_seconds` | FLOAT | Response time in seconds |
 | `token_usage` | STRING | `prompt: X  completion: Y  total: Z` |
+
+**API key (optional)**
+Some servers need an API key, for example Unsloth Studio when it has to load a model on request. The key is deliberately **not** a node input: ComfyUI saves widget values inside workflow files and generated images, so a key typed into a node would leak whenever you share them. Instead, either:
+- create a plain text file named `api_key.txt` inside the `ComfyUI-ApoStudio` folder and paste the key as its only line, or
+- set the `APOSTUDIO_API_KEY` (or `UNSLOTH_API_KEY`) environment variable.
+
+If no key is found, nothing is sent, so keyless servers such as LM Studio work exactly as before. Keep your key private and never upload or share `api_key.txt`.
+
+If the server returns an error, the node now shows the server's own error message in `response`. The Chat node also remembers which `model` it asked for, so the Unload node can unload it automatically.
 
 **Supported input combinations**
 
@@ -161,18 +170,21 @@ Manages multi-turn conversation history by reading from and writing to a JSON se
 ---
 
 ### ApoStudio Unload Models
-Unloads all models from VRAM using the LM Studio CLI (`lms unload --all`). Wire it after your Chat node to automatically free VRAM at the end of a workflow run. Use the execute toggle to quickly disable it without disconnecting anything.
+Frees VRAM at the end of a workflow run. Works with **LM Studio** (via its CLI, `lms unload --all`) and **Unsloth Studio** (via its API). Wire it after your Chat node to automatically free VRAM when the workflow finishes. Use the execute toggle to quickly disable it without disconnecting anything.
 
 **Inputs**
 | Input | Type | Notes |
 |-------|------|-------|
 | `execute` | BOOLEAN | `Unload on Run` / `Skip` — toggle off when iterating quickly |
+| `server` | Dropdown | `LM Studio (lms CLI)` (default) or `Unsloth Studio` |
+| `api_url` | STRING | Unsloth Studio only. Default `http://127.0.0.1:8888/v1` |
+| `model` | STRING | Unsloth Studio only. **Leave empty** to unload the model(s) the Chat node used since the last unload — when you switch models you only change the Chat node's `model`. Type a model name to unload that one instead |
 | `trigger_in` | STRING (optional) | Wire Chat's `response` here to ensure it runs after Chat completes |
 
 **Outputs**
 | Output | Type | Notes |
 |--------|------|-------|
-| `status` | STRING | CLI result message — wire to Display to confirm unload |
+| `status` | STRING | Result message — wire to Display to confirm unload |
 | `trigger_out` | STRING | Passes `trigger_in` through — wire to Display to close the execution chain |
 
 **Wiring:**
@@ -180,7 +192,7 @@ Unloads all models from VRAM using the LM Studio CLI (`lms unload --all`). Wire 
 Chat (response) ──► Unload (trigger_in) ──trigger_out──► Display
 ```
 
-> **Note:** Requires the LM Studio CLI (`lms`) installed and available on your system PATH. This node is specific to LM Studio and will not work with other servers.
+> **Notes:** The `LM Studio` option requires the LM Studio CLI (`lms`) installed and available on your system PATH. The `Unsloth Studio` option uses Studio's API and sends your API key if you have set one (see [Using Unsloth Studio](#using-unsloth-studio)). If you restart ComfyUI while a model is still loaded and leave `model` empty, the node has to ask Studio what is loaded, which can be slow on installs with many models — type the model name in that case.
 
 ---
 
@@ -255,11 +267,19 @@ Files appear in the dropdown on the next workflow run. No restart needed.
 | Server | Default URL |
 |--------|------------|
 | LM Studio | `http://localhost:1234/v1` |
+| Unsloth Studio | `http://127.0.0.1:8888/v1` |
 | Ollama | `http://localhost:11434/v1` |
 | OpenAI API | `https://api.openai.com/v1` |
 | LiteLLM / vLLM / text-generation-webui | Set your own URL |
 
-> The **Unload Models** node uses LM Studio's CLI and is LM Studio-specific. All other nodes work with any OpenAI-compatible server.
+> The **Unload Models** node supports LM Studio (CLI) and Unsloth Studio (API). All other nodes work with any OpenAI-compatible server.
+
+### Using Unsloth Studio
+1. In Unsloth Studio, open **Settings → API**, create an API key, and turn on **Model auto-switch** so Studio loads the model named in the Chat node when it is requested.
+2. Save the key in `api_key.txt` (see [API key](#apostudio-chat) under the Chat node). Never type it into a node.
+3. Set the Chat node's `api_url` to `http://127.0.0.1:8888/v1` and `model` to a model id from Studio's model list, e.g. `unsloth/gemma-4-12b-it-GGUF`.
+4. Set the Unload node's `server` to `Unsloth Studio` and leave its `model` empty.
+5. Switching to another model later only needs a new `model` in the Chat node. Each model loads with the run settings saved for it in Studio, so set those once per model.
 
 ---
 
@@ -273,6 +293,7 @@ ApoStudio/
 ├── README.md                        ← This file
 ├── CHANGELOG.md                     ← Version history
 ├── LICENSE                          ← MIT licence
+├── .gitignore                       ← Keeps your private api_key.txt out of git
 ├── assets/
 │   └── screenshots/
 │       ├── ApoStudio-Nodes.jpg      ← Node collection overview
@@ -282,6 +303,8 @@ ApoStudio/
 ├── nodes/
 │   ├── __init__.py                  ← Package marker
 │   ├── apo_chat.py                  ← ApoStudio Chat
+│   ├── apo_auth.py                  ← Optional API key loading (api_key.txt / env var)
+│   ├── apo_state.py                 ← Remembers which model Chat used (for Unload)
 │   ├── apo_history.py               ← ApoStudio History
 │   ├── apo_prompts.py               ← ApoStudio User Prompt & System Prompt
 │   ├── apo_unload.py                ← ApoStudio Unload Models
