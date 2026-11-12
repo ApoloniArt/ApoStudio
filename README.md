@@ -242,7 +242,8 @@ Image loader with a file picker for your ComfyUI `input/` directory. Supports jp
 4. Restart ComfyUI.
 5. All 7 nodes appear under the **ApoStudio** category. Search **"apo"** in the node finder to see them all.
    
-6. Updating my nodes:
+6. <ins>Updating my nodes:</ins>
+   
    [a] For an install via Comfy Manager, press **Install**
    
    [b] For a git clone install, see below 
