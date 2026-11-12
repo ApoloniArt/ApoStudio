@@ -2,6 +2,21 @@
 
 ---
 
+## [1.2.0] — 2026-11-12
+
+### Added
+- **Optional API key support** for servers that need one (e.g. Unsloth Studio). The key is read from a private `api_key.txt` in the package folder or from the `APOSTUDIO_API_KEY` / `UNSLOTH_API_KEY` environment variable — never from a node widget, so it cannot leak into workflows or images. No key = no header sent, so LM Studio and other keyless servers are unchanged.
+- **ApoStudio Unload Models now supports Unsloth Studio** (via its API) as well as LM Studio (CLI). New inputs: `server`, `api_url`, `model`.
+- **Automatic model detection for Unload:** the Chat node remembers the model it requested and the Unload node unloads it, so switching models only needs a new `model` in the Chat node.
+- `nodes/apo_auth.py`, `nodes/apo_state.py` and a `.gitignore` that keeps `api_key.txt` out of git.
+
+### Changed
+- **ApoStudio Chat** now shows the server's own error message (not just "400 Client Error") in `response`.
+- Unload Models defaults to `LM Studio (lms CLI)`, so existing workflows behave exactly as before.
+- README updated: Unsloth Studio setup, API key instructions, new Unload Models inputs.
+
+---
+
 ## [1.1.0] — 2026-05-26
 
 ### Added
