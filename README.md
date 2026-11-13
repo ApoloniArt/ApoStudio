@@ -170,13 +170,13 @@ Manages multi-turn conversation history by reading from and writing to a JSON se
 ---
 
 ### ApoStudio Unload Models
-Frees VRAM at the end of a workflow run. Works with **LM Studio** (via its CLI, `lms unload --all`) and **Unsloth Studio** (via its API). Wire it after your Chat node to automatically free VRAM when the workflow finishes. Use the execute toggle to quickly disable it without disconnecting anything.
+Frees VRAM at the end of a workflow run. Works with **LM Studio** and **Unsloth Studio** (selected with the `server` input). Wire it after your Chat node to automatically free VRAM when the workflow finishes. Use the execute toggle to quickly disable it without disconnecting anything.
 
 **Inputs**
 | Input | Type | Notes |
 |-------|------|-------|
 | `execute` | BOOLEAN | `Unload on Run` / `Skip` — toggle off when iterating quickly |
-| `server` | Dropdown | `LM Studio (lms CLI)` (default) or `Unsloth Studio` |
+| `server` | Dropdown | `LM Studio` (default) or `Unsloth Studio` |
 | `api_url` | STRING | Unsloth Studio only. Default `http://127.0.0.1:8888/v1` |
 | `model` | STRING | Unsloth Studio only. **Leave empty** to unload the model(s) the Chat node used since the last unload — when you switch models you only change the Chat node's `model`. Type a model name to unload that one instead |
 | `trigger_in` | STRING (optional) | Wire Chat's `response` here to ensure it runs after Chat completes |
@@ -192,7 +192,7 @@ Frees VRAM at the end of a workflow run. Works with **LM Studio** (via its CLI, 
 Chat (response) ──► Unload (trigger_in) ──trigger_out──► Display
 ```
 
-> **Notes:** The `LM Studio` option requires the LM Studio CLI (`lms`) installed and available on your system PATH. The `Unsloth Studio` option uses Studio's API and sends your API key if you have set one (see [Using Unsloth Studio](#using-unsloth-studio)). If you restart ComfyUI while a model is still loaded and leave `model` empty, the node has to ask Studio what is loaded, which can be slow on installs with many models — type the model name in that case.
+> **Notes:** The `LM Studio` option works exactly as this node always has (it uses LM Studio's `lms unload --all` command, so `lms` must be available on your system PATH). The `Unsloth Studio` option uses Studio's API and sends your API key if you have set one (see [Using Unsloth Studio](#using-unsloth-studio)). If you restart ComfyUI while a model is still loaded and leave `model` empty, the node has to ask Studio what is loaded, which can be slow on installs with many models — type the model name in that case.
 
 ---
 
@@ -242,11 +242,7 @@ Image loader with a file picker for your ComfyUI `input/` directory. Supports jp
 4. Restart ComfyUI.
 5. All 7 nodes appear under the **ApoStudio** category. Search **"apo"** in the node finder to see them all.
    
-6. <ins>Updating my nodes:</ins>
-   
-   [a] For an install via Comfy Manager, press **Install**
-   
-   [b] For a git clone install, see below 
+6. Updating my nodes:
  ```bash
    cd ComfyUI/custom_nodes/ComfyUI-ApoStudio
    git pull
@@ -276,7 +272,7 @@ Files appear in the dropdown on the next workflow run. No restart needed.
 | OpenAI API | `https://api.openai.com/v1` |
 | LiteLLM / vLLM / text-generation-webui | Set your own URL |
 
-> The **Unload Models** node supports LM Studio (CLI) and Unsloth Studio (API). All other nodes work with any OpenAI-compatible server.
+> The **Unload Models** node supports LM Studio and Unsloth Studio. All other nodes work with any OpenAI-compatible server.
 
 ### Using Unsloth Studio
 1. In Unsloth Studio, open **Settings → API**, create an API key, and turn on **Model auto-switch** so Studio loads the model named in the Chat node when it is requested.
