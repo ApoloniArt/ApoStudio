@@ -6,13 +6,15 @@ import importlib
 import subprocess
 import sys
 import os
+import logging
+import colorsys
 
 def _ensure(package: str, import_name=None):
     name = import_name or package
     try:
         importlib.import_module(name)
     except ImportError:
-        print(f"[ApoStudio] Installing: {package}")
+        logging.info(f"[ApoStudio] Installing: {package}")
         subprocess.check_call([sys.executable, "-m", "pip", "install", package])
 
 _ensure("requests")
@@ -51,4 +53,26 @@ WEB_DIRECTORY = "web"
 
 __all__ = ["NODE_CLASS_MAPPINGS", "NODE_DISPLAY_NAME_MAPPINGS", "WEB_DIRECTORY"]
 
-print("[ApoStudio] Loaded — 7 nodes registered.")
+# ---------------------------------------------------------------------------
+# Rainbow banner definition
+# ---------------------------------------------------------------------------
+def _rainbow(text, white=""):
+    """Render *text* with a full red → green → blue → red gradient sweep so the
+    rainbow always fits the message length. The substring given as *white*
+    (the version number) is painted white instead of following the sweep."""
+    head, _, tail = text.partition(white) if white else (text, "", "")
+    plain_len = max(len(head) + len(tail) - 1, 1)
+    idx = 0  # position of this char within the non-white character stream
+    out = []
+    for part, is_white in ((head, False), (white, True), (tail, False)):
+        for ch in part:
+            if is_white:
+                out.append("\033[38;2;255;255;255m" + ch)
+            else:
+                r, g, b = (int(c * 255) for c in colorsys.hsv_to_rgb(idx / plain_len, 1, 1))
+                out.append(f"\033[38;2;{r};{g};{b}m" + ch)
+                idx += 1
+    return "".join(out) + "\033[0m"
+
+# changed to new and color
+logging.info(_rainbow("[ApoStudio] Loaded - 7 nodes registered."))
