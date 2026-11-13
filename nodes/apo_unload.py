@@ -6,7 +6,7 @@ import requests
 from .apo_auth import build_headers
 from .apo_state import take_models, restore_models
 
-SERVERS = ["LM Studio (lms CLI)", "Unsloth Studio"]
+SERVERS = ["LM Studio", "Unsloth Studio"]
 
 
 def _base_url(api_url):
